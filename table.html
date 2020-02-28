@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table-練習</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dragula.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        .gu-mirror {
+            filter: alpha(opacity=80);
+            transform: skewX(-1deg) skewY(1deg);
+        }
+
+        .kanban-card {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="body-gray">
+    <div class="addSetupBg">
+        <div class="addSetup">
+            <a href="javascript:void(0)" class="add"><img src="./images/add.png" alt=""></a>
+            <div id="setupForm">
+                <form action="" class="addForm">
+                    <h2>SET<i class="fas fa-wrench"></i>UP</h2>
+                    <div class="form-item">
+                        <label for="source">*Source</label>
+                        <select name="source" id="source">
+                            <option value="any" selected>Any</option>
+                            <option value="ip">IP</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label for="sourcePort">*Source Port</label>
+                        <input type="text" name="sourcePort" id="sourcePort">
+                    </div>
+                    <div id="sourceIp">
+                    </div>
+                    <div class="form-item">
+                        <label for="destination">*Destination</label>
+                        <select name="destination" id="destination">
+                            <option value="any">Any</option>
+                            <option value="ip">IP</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label for="port">*Destination Port</label>
+                        <input type="text" name="port" id="port">
+                    </div>
+                    <div id="destinationIp">
+                    </div>
+                    <div class="form-item">
+                        <label for="protocol">*Protocol</label>
+                        <div id="protocol">
+                            <a href="javascript:void(0)" class="setupPro-active" value="Any">Any</a>
+                            <a href="javascript:void(0)" value="TCP">TCP</a>
+                            <a href="javascript:void(0)" value="UDP">UDP</a>
+                            <a href="javascript:void(0)" value="ICMP">ICMP</a>
+                        </div>
+                    </div>
+                    <div class="form-item operating">
+                        <label for="operating">*Operating</label>
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                id="myonoffswitchAdd">
+                            <label class="onoffswitch-label" for="myonoffswitchAdd">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="priority">*Priority</label>
+                        <input type="text" id="priority">
+                    </div>
+                    <div class="form-item half">
+                        <label for="name">*Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form-item half">
+                        <label for="group">Group</label>
+                        <input type="text" id="group">
+                    </div>
+                    <div class="form-item">
+                        <label for="protocol">Description</label>
+                        <textarea name="description" id="description"></textarea>
+                    </div>
+
+                    <a class="form-item" href="javascript:void(0)" onclick="add($(this))"><i
+                            class="fas fa-check-circle"></i></a>
+                </form>
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="table-header row">
+                <div class="header-bg1 col-md-6 pd0"></div>
+                <div class="header-bg2 col-md-6 pd0"><a href="index.html"><i class="fas fa-sign-out-alt"></i></a></div>
+                <div class="member">
+                    <img src="images/logo.png" alt="">
+                    <div class="memberName">
+                        <i class="fas fa-tv"></i>
+                        <div id="inputBox" class="inputBox">
+                            <input type="text" id="member" value="Member Name" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container table-box">
+                <div class="clean">
+                    <a href="javascript:void(0)" id="btn-trash" onclick="trash_func1($(this))"><i
+                            class="fas fa-trash-alt"></i></a>
+                </div>
+
+
+                <div class="table-scroll" id="scroll-style">
+                    <div id="card-454267">
+                        <!---一個list
+                    <div class="list">
+                        <div class="card-link" data-toggle="collapse" data-parent="#card-454267" href="#card-element01"
+                            aria-expanded="true">
+                            <i class="fas fa-chevron-right"></i>
+                            <p id="groupTit"></p>
+                            <a href="javascript:void(0)" class="list-editBtn"><i class="far fa-edit"></i></a>
+                        </div>
+                        <div id="card-element01" class="collapse">
+                            <div class="card-body table-responsive">
+                                <table class="table" border="0">
+                                    <thead>
+                                        <tr>
+                                            <th class="thead-svg">
+                                                <input type="checkbox" value="None" id="squaredInner00" name="check" />
+                                                <label for="squaredInner00"></label>
+                                            </th>
+                                            <th class="thead-sort"><i class="fas fa-sort-alpha-down"></i></th>
+                                            <th>Name</th>
+                                            <th>Source</th>
+                                            <th>Source Port</th>
+                                            <th>Source IP</th>
+                                            <th>Destination</th>
+                                            <th>Destination Port</th>
+                                            <th>Destination IP</th>
+                                            <th>Protocol</th>
+                                            <th class="thead-checkbox2">
+                                                <div class="onoffswitch">
+                                                    <input type="checkbox" name="onoffswitch"
+                                                        class="onoffswitch-checkbox" id="myonoffswitch01-0">
+                                                    <label class="onoffswitch-label" for="myonoffswitch01-0">
+                                                        <span class="onoffswitch-inner"></span>
+                                                        <span class="onoffswitch-switch"></span>
+                                                    </label>
+                                                </div>
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="groupListInner">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" value="None" id="squaredInner01" name="check" />
+                                                <label for="squaredInner01"></label>
+                                            </td>
+                                            <th>123</th>
+                                            <th>Name</th>
+                                            <th>Source</th>
+                                            <th>Source Port</th>
+                                            <th>Source IP</th>
+                                            <th>Destination</th>
+                                            <th>Destination Port</th>
+                                            <th>Destination IP</th>
+                                            <th>Protocol</th>
+                                            <td class="tbody-checkbox2">
+                                                <div class="onoffswitch">
+                                                    <input type="checkbox" name="onoffswitch"
+                                                        class="onoffswitch-checkbox" id="myonoffswitch01-2">
+                                                    <label class="onoffswitch-label" for="myonoffswitch01-2">
+                                                        <span class="onoffswitch-inner"></span>
+                                                        <span class="onoffswitch-switch"></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td class="edit">
+                                                <a href="javascript:void(0)"><i class="far fa-edit"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" value="None" id="squaredInner02" name="check" />
+                                                <label for="squaredInner02"></label>
+                                            </td>
+                                            <th>123</th>
+                                            <th>Name</th>
+                                            <th>Source</th>
+                                            <th>Source Port</th>
+                                            <th>Source IP</th>
+                                            <th>Destination</th>
+                                            <th>Destination Port</th>
+                                            <th>Destination IP</th>
+                                            <th>Protocol</th>
+                                            <td class="tbody-checkbox2">
+                                                <div class="onoffswitch">
+                                                    <input type="checkbox" name="onoffswitch"
+                                                        class="onoffswitch-checkbox" id="myonoffswitch01-3">
+                                                    <label class="onoffswitch-label" for="myonoffswitch01-3">
+                                                        <span class="onoffswitch-inner"></span>
+                                                        <span class="onoffswitch-switch"></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td class="edit">
+                                                <a href="javascript:void(0)"><i class="far fa-edit"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>--->
+
+                    </div>
+                    <div class="out-list" data-group=" " data-caption=" ">
+                        <div class="card-body table-responsive">
+                            <table class="table" border="0" class="keywords" id="table_out">
+                                <thead id="noGroupTit">
+                                    <!--<tr>
+                                    <th class="thead-svg">
+                                        <input type="checkbox" value="None" name="all" onclick="check_all(this,'outChecked')" />
+                                        <label for="squaredOut01"></label>
+                                    </th>
+                                    <th class="thead-sort"><i class="fas fa-sort-alpha-down"></i></th>
+                                    <th>Name</th>
+                                    <th>Source</th>
+                                    <th class="titWidth">Source Port</th>
+                                    <th class="titWidth">Source IP</th>
+                                    <th>Destination</th>
+                                    <th class="titWidth2">Destination Port</th>
+                                    <th class="titWidth">Destination IP</th>
+                                    <th>Protocol</th>
+                                    <th class="thead-checkbox2">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                                id="myonoffswitch-out00" checked >
+                                            <label class="onoffswitch-label" for="myonoffswitch-out00">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>-->
+                                </thead>
+                                <tbody id="outListInner"></tbody>
+                                <!----<tr>
+                                    <td>
+                                        <input type="checkbox" value="None" id="squaredOut02" name="check"  />
+                                        <label for="squaredOut02"></label>
+                                    </td>
+                                    <th>123</th>
+                                    <th>Name</th>
+                                    <th>Source</th>
+                                    <th>Source Port</th>
+                                    <th>Source IP</th>
+                                    <th>Destination</th>
+                                    <th>Destination Port</th>
+                                    <th>Destination IP</th>
+                                    <th>Protocol</th>
+                                    <td class="tbody-checkbox2">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                                id="myonoffswitch-out01">
+                                            <label class="onoffswitch-label" for="myonoffswitch-out01">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="edit">
+                                        <a href="javascript:void(0)"><i class="far fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                --->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-apply" onclick="apply()">
+                <button></button>
+            </div>
+
+        </div>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/fontawesome.min.js"></script>
+        <script src="data.json" type="text/javascript"></script>
+        <script src="js/dragula.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/setup.js"></script>
+        <script src="js/other1.js"></script>
+        
+
+</body>
+
+</html>

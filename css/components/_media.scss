@@ -1,0 +1,411 @@
+@media (max-width: 1296px) {
+  .thead-svg {
+    padding-bottom: 0 4px;
+  }
+}
+@media (max-width: 992px) {
+  .btn-apply .btn-this-primary {
+    font-size: 24px;
+  }
+  .login-box {
+    width: 443px;
+  }
+  .inner {
+    p {
+      width: 440px;
+      margin-bottom: 49%;
+      font-size: 30px;
+      margin-right: -178px;
+    }
+  }
+  .input-list {
+    input {
+      width: 73%;
+    }
+  }
+  .login {
+    margin-bottom: -52%;
+    margin-left: -172px;
+    h3 {
+      font-size: 40px;
+    }
+  }
+  .logo {
+    width: 180px;
+    height: 180px;
+    margin-top: -15%;
+    margin-bottom: -52px;
+  }
+  .card-body {
+    thead {
+      th {
+        line-height: 16px;
+        vertical-align: middle;
+        padding: 0 7px;
+      }
+    }
+    tbody {
+      td {
+        padding: 4px !important;
+        line-height: 25px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .thead-svg {
+    padding: 0 4px !important;
+    padding-bottom: 8px !important;
+  }
+  .thead-sort svg {
+    font-size: 21px;
+  }
+}
+@media (max-width: 828px) {
+  input[type="checkbox"] {
+    top: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .header-bg1,
+  .header-bg2 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 80px;
+  }
+  .header-bg2 {
+    &::after {
+      height: 46px;
+      margin-top: 80px;
+    }
+    svg {
+      font-size: 42px;
+      margin: 21px;
+      margin-top: 19px;
+    }
+  }
+  .member {
+    img {
+      width: 135px;
+      height: 135px;
+      margin-top: 42px;
+    }
+    svg {
+      display: none;
+    }
+    input {
+      text-align: center;
+    }
+  }
+  .addSetup {
+    top: 15%;
+    right: -404px;
+    width: 404px;
+    img {
+      width: 80px;
+      margin-left: -80px;
+    }
+    .add {
+      margin-left: 0;
+    }
+    form {
+      margin: 20px 0;
+    }
+  }
+  .form-item {
+    width: 88%;
+    a {
+      width: calc(84% / 4);
+      margin: 0 5px;
+      padding: 2px 0;
+    }
+  }
+  .addSetupNew {
+    top: 3%;
+    right: 0;
+  }
+  .clean {
+    padding-right: 0;
+  }
+  .card-link {
+    padding-right: 0;
+    border-radius: 30px;
+    .fa-chevron-right {
+      margin-right: 10px;
+    }
+    .fa-edit {
+      margin-right: 2px;
+    }
+    span {
+      word-wrap: break-word;
+    }
+  }
+  .card-body {
+    padding: 0 25px;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    tbody td {
+      line-height: 20px;
+    }
+  }
+  input[type="checkbox"] {
+    top: -3px;
+  }
+  .thead-svg {
+    input[type="checkbox"] {
+      top: -1px;
+    }
+  }
+  .groupItem {
+    width: 48px;
+    margin-left: 0;
+  }
+  .list_editBtn {
+    margin-right: 0;
+  }
+  .groupCaption {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 737px) {
+  .thead-svg {
+    input[type="checkbox"] {
+      top: 6px;
+    }
+  }
+  input[type="checkbox"] {
+    top: 7px;
+  }
+}
+@media (max-width: 713px) {
+  .login-bg {
+    position: inherit;
+    &::before {
+      content: none;
+    }
+  }
+  .inner {
+    display: block;
+    width: 100%;
+    p {
+      width: 100%;
+      height: inherit;
+      padding: 23% 0;
+      margin-bottom: 0;
+      margin-right: 0;
+      line-height: inherit;
+    }
+  }
+  .login-box {
+    border-radius: 0;
+  }
+  .logo {
+    width: 165px;
+    height: 165px;
+    margin-top: -11%;
+    margin-bottom: -12%;
+  }
+  .login {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: none;
+    h3 {
+      padding-top: 110px;
+      padding-bottom: 16px;
+    }
+  }
+  .input-list {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    input {
+      margin-left: 6%;
+    }
+  }
+  .list_editBtn {
+    margin-right: 0;
+  }
+  .groupCaption {
+    display: block;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .login {
+    h3 {
+      padding-top: 14%;
+    }
+  }
+  .btn-apply {
+    border-bottom: 8px solid $color-blue;
+    .btn-this-primary {
+      font-size: 20px;
+    }
+  }
+  .member {
+    img {
+      width: 120px;
+      height: 120px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+  .header-bg1,
+  .header-bg2 {
+    height: 63px;
+  }
+  .header-bg2 {
+    &::after {
+      margin-top: 63px;
+    }
+    svg {
+      margin-top: 11px;
+    }
+  }
+  .clean svg {
+    font-size: 24px;
+  }
+  .groupCaption {
+    margin: 0;
+  }
+  .card-link {
+    padding: 0.75rem 0.5rem;
+    p {
+      width: 60%;
+      line-height: 19px;
+      padding-right: 5px;
+    }
+    a {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    svg {
+      height: 51px;
+    }
+    input {
+      margin: 5px 0;
+    }
+  }
+  .addSetup {
+    top: 117px;
+    width: 290px;
+    right: -290px;
+    h2 {
+      font-size: 24px;
+      padding: 0 10px;
+      margin-bottom: 9px;
+    }
+    img {
+      width: 60px;
+      margin-left: -60px;
+    }
+  }
+  .addNew {
+    img {
+      margin-left: 0;
+    }
+  }
+  .addSetupNew {
+    top: 3%;
+    right: 0;
+  }
+  .form-item {
+    option,
+    input,
+    select,
+    textarea,
+    a {
+      height: 25px;
+      padding: 0px 15px;
+      font-size: 16px;
+    }
+  }
+
+  #protocol {
+    & > a {
+      padding: 0;
+      font-size: 16px;
+      width: calc(79% / 4);
+    }
+  }
+  .half {
+    width: 45%;
+  }
+  #description {
+    height: 56px;
+    line-height: 19px;
+    padding: 8px 15px;
+  }
+  .form-item {
+    label {
+      font-size: 16px;
+    }
+  }
+  .addSetupBg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 20;
+  }
+  .addSetupBgNew {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+  }
+  .addNew {
+    margin-left: 0 !important;
+    img {
+      margin-top: 5px;
+      transform: scaleX(-1);
+    }
+  }
+  .btn-apply {
+    height: 54px;
+    button {
+      font-size: 22px;
+      &::after {
+        width: 181px;
+      }
+    }
+  }
+  .table-scroll {
+    margin-bottom: 65px;
+  }
+  .inputBox {
+    input {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 365px) {
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+  .login {
+    h3 {
+      font-size: 35px;
+    }
+  }
+  .inner {
+    p {
+      font-size: 25px;
+    }
+  }
+  .input-list {
+    img {
+      max-width: 65%;
+    }
+    input {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,333 @@
+.table-header {
+  margin: 0;
+}
+.header-bg1 {
+  background-color: $color-blue;
+  height: 119px;
+}
+.member {
+  text-align: center;
+  margin: 0 auto;
+  z-index: 2;
+  margin-top: -84px;
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    box-shadow: $box-shadow;
+    margin-bottom: 10px;
+  }
+  svg {
+    color: $color-blue;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  p {
+    color: $color-blue;
+    display: inline-block;
+    font-size: 30px;
+  }
+  input {
+    width: 200px;
+  }
+}
+.inputBox {
+  display: inline-block;
+  input {
+    font-size: 27px;
+    padding: 0 5px;
+  }
+  input[disabled] {
+    border: none;
+    background-color: transparent;
+    color: $color-blue;
+  }
+}
+.header-bg2 {
+  height: 119px;
+  svg {
+    color: $color-blue;
+    font-size: 58px;
+    float: right;
+    margin: 30px;
+  }
+  &::after {
+    content: "";
+    height: 60px;
+    width: 100%;
+    background-color: $color-blue;
+    display: block;
+    margin-left: 0;
+    margin-top: 119px;
+  }
+}
+.btn-apply {
+  height: 73px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  button {
+    font-size: 30px;
+    background: $color-blue;
+    border: none;
+    color: #fff;
+    position: relative;
+    z-index:3;
+    bottom: 0;
+    left: calc(50% - 50px);
+    display: block;
+    &::before {
+      content: "APPLY";
+      position: absolute;
+      z-index: 10;
+    }
+    &::after {
+      content: "";
+      border-color: transparent transparent $color-blue transparent;
+      border-width: 48px;
+      border-style: solid;
+      position: absolute;
+      top: -48px;
+      left: -49px;
+      z-index: 1;
+      width: 205px;
+    }
+  }
+  border-bottom: 25px solid $color-blue;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $color-gray;
+  padding-top: 9px;
+}
+.groupItem {
+  display: inline-block;
+  float: right;
+  a {
+    padding: 0 10px;
+    display: inline-block;
+  }
+  .item {
+    display: none;
+  }
+}
+
+.sort {
+  border: none;
+  background-color: transparent;
+  color: $color-blue;
+  font-size: 10px;
+}
+.container {
+  max-width: 1670px;
+}
+.clean {
+  border-bottom: 2px solid $color-blue;
+  margin-bottom: 20px;
+  svg {
+    font-size: 30px;
+    margin: 5px 10px;
+    color: $color-blue;
+  }
+}
+.card {
+  border-radius: 15px;
+  margin-bottom: 8px;
+  border: none;
+}
+.card-header {
+  border: none;
+  background-color: initial;
+}
+.card-link-active {
+  color: #fff !important;
+  background-color: $color-blue !important;
+  .fa-chevron-right {
+    transform: rotate(90deg);
+  }
+  a,
+  svg {
+    color: #fff;
+  }
+}
+.card-link {
+  cursor: pointer;
+  color: $color-blue;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  svg {
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  p {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  .fa-chevron-right {
+    margin-left: 10px;
+    margin-right: 30px;
+  }
+  a {
+    color: $color-blue;
+  }
+  input {
+    border: none;
+    background-color: $color-gray;
+    padding: 0 10px;
+    padding-bottom: 1px;
+    height: 30px;
+  }
+}
+.memberTxt {
+  border: none;
+  background-color: #fff;
+  padding: 0 10px;
+  padding-bottom: 1px;
+  color: $color-blue;
+}
+.list_editBtn {
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+  z-index: 100;
+}
+.groupName {
+  margin-right: 15px;
+  input {
+    width: 150px;
+  }
+}
+.groupCaption {
+  margin: 0 10px;
+}
+.card-body {
+  background-color: $color-gray;
+  padding: 0 70px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  padding-top: 0;
+  .divSpace:hover {
+    background-color: $color-gray;
+  }
+  a {
+    color: $color-blue;
+  }
+  thead {
+    font-size: 18px;
+    font-style: italic;
+    color: $color-blue;
+    th {
+      padding: 6px 1px;
+      border-bottom: 1px solid $color-blue;
+    }
+  }
+  .thead-svg {
+    padding: 4px;
+    padding-bottom: 10px;
+  }
+  .fa-sort-alpha-down {
+    font-size: 25px;
+  }
+  .fa-sort-alpha-down-alt {
+    font-size: 25px;
+    display: none;
+  }
+  tbody {
+    font-size: 16px;
+    color: $color-blue;
+    td {
+      padding: 4px !important;
+    }
+    tr:hover {
+      background-color: #c1c0c1;
+    }
+  }
+}
+.divSpace {
+  height: 5px;
+}
+.thead-checkbox {
+  position: relative;
+  background-position: 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../images/checkbox.png") no-repeat;
+  border: none;
+  cursor: pointer;
+  .checked {
+    background-position: -21px 0;
+  }
+  input {
+    opacity: 0;
+    position: absolute;
+  }
+  ins {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    opacity: 0;
+  }
+}
+.edit {
+  padding: 0 !important;
+  vertical-align: middle !important;
+  svg {
+    font-size: 25px;
+  }
+  .item {
+    display: none;
+  }
+}
+.tbody-checkbox2,
+.thead-checkbox2 {
+  padding: 0 !important;
+  vertical-align: middle !important;
+  padding-left: 7px !important;
+}
+.out-list {
+  border-top: 5px solid $color-blue;
+  margin-top: 35px;
+  padding-top: 20px;
+}
+.table-scroll {
+  overflow: auto !important;
+  max-width: 100%;
+  max-height: 508px;
+  padding-right: 20px;
+  margin-bottom: 100px;
+}
+#scroll-style {
+  &::-webkit-scrollbar {
+    background-color: $color-blue;
+    border-radius: 100px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 100px;
+  }
+}
+.titWidth {
+  min-width: 111px;
+}
+.titWidth2 {
+  min-width: 146px;
+}

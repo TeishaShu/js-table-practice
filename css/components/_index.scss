@@ -1,0 +1,113 @@
+.body-gray {
+  background-color: $color-gray;
+}
+.login-bg {
+  background-color: $color-gray;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  &::before {
+    content: "";
+    background-color: $color-blue;
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+.login-box {
+  width: 534px;
+  display: block;
+  border-radius: 8px;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+.inner {
+  display: inline-flex;
+  align-items: center;
+  p {
+    background-color: $color-blue;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    width: 600px;
+    height: 350px;
+    line-height: 350px;
+    margin-right: -208px;
+    margin-bottom: 37%;
+  }
+}
+.logo {
+  z-index: 20;
+  width: 210px;
+  height: 210px;
+  margin-top: -5%;
+}
+.login {
+  text-align: center;
+  background-color: #d9d7d8;
+  font-size: 24px;
+  margin-left: -200px;
+  margin-bottom: -40%;
+  h3 {
+    font-size: 44px;
+    color: #fff;
+    padding-top: 45px;
+    padding-bottom: 16px;
+  }
+  button {
+    margin-bottom: 30px;
+  }
+}
+.input-list {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  margin-bottom: 27px;
+  border-radius: 16px;
+  width: 85%;
+  padding: 8px 13px;
+  background-color: #fff;
+  text-align: left;
+  .icon {
+    display: inline-block;
+  }
+  input {
+    border: none;
+    margin-left: 35px;
+    color:$color-blue;
+  }
+}
+::-webkit-input-placeholder { /* Edge */
+  color: lighten($color-gray,1%);
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  color: lighten($color-gray,1%);
+}
+
+::placeholder {
+  color: lighten($color-gray,1%);
+}
+.btn-this-primary {
+  padding: 5px 27px;
+  border-radius: 10px;
+  border: none;
+  background-color: $color-blue;
+  color: #fff;
+}
+.forget {
+  background-color: transparent;
+  text-align: right;
+  margin-top: -32px;
+  margin-bottom: 5px;
+  a {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+  }
+}

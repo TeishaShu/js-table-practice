@@ -327,12 +327,23 @@ input[type="checkbox"]:checked:after {
 }
 
 .inner {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 10%;
 }
 
 .inner p {
@@ -349,27 +360,16 @@ input[type="checkbox"]:checked:after {
 
 .logo {
   z-index: 20;
-  width: 210px;
-  height: 210px;
-  margin-top: -5%;
+  width: 20%;
 }
 
-.login {
-  text-align: center;
-  background-color: #d9d7d8;
-  font-size: 24px;
-  margin-left: -200px;
-  margin-bottom: -40%;
-}
-
-.login h3 {
-  font-size: 44px;
-  color: #fff;
-  padding-top: 45px;
+h3 {
+  font-size: 40px;
+  color: #4a6865;
   padding-bottom: 16px;
 }
 
-.login button {
+button {
   margin-bottom: 30px;
 }
 
@@ -383,16 +383,19 @@ input[type="checkbox"]:checked:after {
   padding: 8px 13px;
   background-color: #fff;
   text-align: left;
+  vertical-align: middle;
 }
 
-.input-list .icon {
-  display: inline-block;
+.input-list img {
+  width: 40px;
 }
 
 .input-list input {
+  vertical-align: middle;
   border: none;
   margin-left: 35px;
   color: #4a6865;
+  font-size: 22px;
 }
 
 ::-webkit-input-placeholder {
@@ -432,6 +435,10 @@ input[type="checkbox"]:checked:after {
   display: block;
   font-size: 18px;
   color: #fff;
+}
+
+#login {
+  font-size: 20px;
 }
 
 .table-header {
@@ -861,12 +868,6 @@ input[type="checkbox"]:checked:after {
   .login h3 {
     font-size: 40px;
   }
-  .logo {
-    width: 180px;
-    height: 180px;
-    margin-top: -15%;
-    margin-bottom: -52px;
-  }
   .card-body thead th {
     line-height: 16px;
     vertical-align: middle;
@@ -1022,12 +1023,6 @@ input[type="checkbox"]:checked:after {
   }
   .login-box {
     border-radius: 0;
-  }
-  .logo {
-    width: 165px;
-    height: 165px;
-    margin-top: -11%;
-    margin-bottom: -12%;
   }
   .login {
     margin-bottom: 0;

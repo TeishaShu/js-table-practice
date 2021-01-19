@@ -73,7 +73,9 @@ input[type=search] {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
-
+button {
+    margin-bottom: 0!important;
+}
 textarea {
     overflow: auto;
     vertical-align: top;
